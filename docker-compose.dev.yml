@@ -1,0 +1,34 @@
+version: '3.8'
+#containers => services
+services:
+  mysql-springboot-container:
+    image: mysql:8.0.28
+    container_name: mysql-Manh
+    ports:
+      - 3310:3306
+    volumes:
+      - mysql-springboot-data:/var/lib/mysql
+      - mysql-springboot-config-deamond:/etc/mysql/conf.d
+    networks:
+      - backend
+    environment:
+      MYSQL_USER: manh
+      MYSQL_PASSWORD: manh@
+      MYSQL_ROOT_PASSWORD: manh@
+      MYSQL_DATABASE: StudentManagement
+  springboot-docker-container:
+    image: manh2009/springboot-docker:0.0.1
+    container_name: Manh
+    ports:
+      - 8085:8888
+    volumes:
+      - ./:/app
+    networks:
+      - backend
+#create network
+networks:
+  backend:
+    name: Manh-network
+volumes:
+  mysql-springboot-data:
+  mysql-springboot-config-deamond:
