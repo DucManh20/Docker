@@ -49,7 +49,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>spring-docker-demo</finalName>
+		<finalName>${name}</finalName>
 	</build>
 
 </project>
