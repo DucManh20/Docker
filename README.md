@@ -39,3 +39,4 @@ docker restart springboot-docker-container
 ##### Access mysql cmd inside mysql-springboot-container:
 - docker exec -ti mysql-springboot-container mysql -u root - p
 
+https://youtu.be/7BCtc9cAS6o
